@@ -9,9 +9,11 @@ namespace RevStack.Notification
     public class NotifyTask<TKey> : INotifyTask<TKey>
     {
         protected readonly IIdentityEmailService _service;
-        public NotifyTask(IIdentityEmailService service)
+        protected readonly IIdentitySmsService _smsService;
+        public NotifyTask(IIdentityEmailService service, IIdentitySmsService smsService)
         {
             _service = service;
+            _smsService = smsService;
         }
         public NotifyTask() { }
 
