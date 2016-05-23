@@ -30,11 +30,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\RobbStucky\net\RobbStucky.Mvc\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RevStack.Configuration">
+      <HintPath>..\..\RevStack.Configuration\RevStack.Configuration\bin\Release\RevStack.Configuration.dll</HintPath>
+    </Reference>
     <Reference Include="RevStack.Identity">
       <HintPath>\\Mac\Home\Documents\Development\mono\RevStack\updated\RevStack.Identity\RevStack.Identity\bin\Release\RevStack.Identity.dll</HintPath>
     </Reference>
     <Reference Include="RevStack.Mvc">
       <HintPath>\\Mac\Home\Documents\Development\mono\RevStack\updated\RevStack.Mvc\bin\Release\RevStack.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="RevStack.Net">
+      <HintPath>..\..\RevStack.Net\bin\Release\RevStack.Net.dll</HintPath>
     </Reference>
     <Reference Include="RevStack.Pattern">
       <HintPath>\\Mac\Home\Documents\Development\mono\RevStack\updated\RevStack.Pattern\RevStack.Pattern\bin\Release\RevStack.Pattern.dll</HintPath>
@@ -50,13 +60,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlertMessage.cs" />
+    <Compile Include="IAlertMessage.cs" />
+    <Compile Include="IMessage.cs" />
     <Compile Include="INotify.cs" />
     <Compile Include="INotifyTask.cs" />
     <Compile Include="INotifyTaskList.cs" />
     <Compile Include="NotifyAlert.cs" />
     <Compile Include="NotifyTask.cs" />
     <Compile Include="NotifyTaskList.cs" />
+    <Compile Include="NotifyTasks.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
