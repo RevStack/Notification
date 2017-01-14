@@ -1,6 +1,6 @@
 {
   "name": "RevStack.Notification",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "Email and Sms notification abstraction",
   "main": "RevStack.Notification.sln",
   "scripts": {
